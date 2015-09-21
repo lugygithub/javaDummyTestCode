@@ -1,8 +1,22 @@
 /* a program to show how to run command line commands from a java program
  * 2 ways to do this: 
  * 						(1) from Runtime.exec()
- * 						(2) from ProcessBuilder.strt()
+ * 						(2) from ProcessBuilder.start()
  */
+
+/*  The code will be one of the two:
+ *	String[] cmds = {"ls", "-l"};
+ *	Process pr;
+ *	-------------------------
+ *	(1) pr = Runtime.getRuntime().exec(cmds);
+ *	--------- end way-1 ----------------
+ *	(2) ProcessBulder pb = new ProcessBuilder(cmds);
+ *		... Do more things than way-1 ...
+ *		pr = pb.start();
+ *	--------- end way-2 ----------------
+ *		pr.waitFor();
+ */
+
 
 import java.io.IOException;
 
